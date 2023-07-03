@@ -1,0 +1,18 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model Category
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(model => model.CategoryId)
+    <div>
+        <label for="CategoryName">Category Name:</label>
+        @Html.TextBoxFor(model => model.CategoryName)
+    </div>
+    <div>
+        <input type="submit" value="Save" />
+    </div>
+}

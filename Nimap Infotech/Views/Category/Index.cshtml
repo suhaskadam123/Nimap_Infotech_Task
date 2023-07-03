@@ -1,0 +1,25 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model List<Category>
+
+<table>
+    <tr>
+        <th>Category Id</th>
+        <th>Category Name</th>
+        <th></th>
+        <th></th>
+    </tr>
+    @foreach (var category in Model)
+    {
+        <tr>
+            <td>@category.CategoryId</td>
+            <td>@category.CategoryName</td>
+            <td>@Html.ActionLink("Edit", "Edit", new { id = category.CategoryId })</td>
+            <td>@Html.ActionLink("Delete", "Delete", new { id = category.CategoryId })</td>
+        </tr>
+    }
+</table>
+@Html.ActionLink("Create New", "Create")
