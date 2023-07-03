@@ -1,0 +1,50 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model ProductListViewModel
+
+<table>
+  <thead>
+     <tr>
+          
+        <th>Product Id</th>
+        <th>Product Name</th>
+        <th>Category Id</th>
+        <th>Category Name</th>
+     </tr>
+  </thead>
+  <tbody>
+    @foreach (var product in Model.Products)
+    {
+        <tr>
+            <td>@product.ProductId</td>
+            <td>@product.ProductName</td>
+            <td>@product.CategoryId</td>
+            <td>@product.CategoryName</td>
+        </tr>
+    }
+     </tbody>
+</table>
+
+@{
+    int totalPages = (int)Math.Ceiling((double)Model.TotalProducts / Model.PageSize);
+    int currentPage = Model.CurrentPage;
+}
+
+<div>
+    @if (currentPage > 1)
+    {
+        @Html.ActionLink("<<", "Index", new { page = 1, pageSize = Model.PageSize })
+        @Html.ActionLink("<", "Index", new { page = currentPage - 1, pageSize = Model.PageSize })
+    }
+    Page @currentPage of @totalPages
+    @if (currentPage < totalPages)
+    {
+        @Html.ActionLink(">", "Index", new { page = currentPage + 1, pageSize = Model.PageSize })
+        @Html.ActionLink(">>", "Index", new { page = totalPages, pageSize = Model.PageSize })
+    }
+</div>
+
+
