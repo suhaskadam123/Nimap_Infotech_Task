@@ -10007,11 +10007,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Nimap Infotech\\Nimap Infotech\\Nimap Infotech\\Nimap Infotech_Task.csproj",
+      "projectUniqueName": "C:\\Nimap Infotech\\Nimap_Infotech_Demo\\Nimap Infotech\\Nimap Infotech_Task.csproj",
       "projectName": "Nimap Infotech_Task",
-      "projectPath": "C:\\Nimap Infotech\\Nimap Infotech\\Nimap Infotech\\Nimap Infotech_Task.csproj",
+      "projectPath": "C:\\Nimap Infotech\\Nimap_Infotech_Demo\\Nimap Infotech\\Nimap Infotech_Task.csproj",
       "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
-      "outputPath": "C:\\Nimap Infotech\\Nimap Infotech\\Nimap Infotech\\obj\\",
+      "outputPath": "C:\\Nimap Infotech\\Nimap_Infotech_Demo\\Nimap Infotech\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
