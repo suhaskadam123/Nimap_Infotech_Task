@@ -5,7 +5,7 @@
 }
 @model ProductListViewModel
 
-<table>
+@*<table>
   <thead>
      <tr>
           
@@ -26,7 +26,29 @@
         </tr>
     }
      </tbody>
+</table>*@
+<table>
+    <tr>
+         <th>Product Id</th>
+        <th>Product Name</th>
+        <th>Category Id</th>
+        <th>Category Name</th>
+        <th></th>
+        <th></th>
+    </tr>
+    @foreach (var product in Model.Products)
+    {
+        <tr>
+            <td>@product.ProductId</td>
+            <td>@product.ProductName</td>
+            <td>@product.CategoryId</td>
+            <td>@product.CategoryName</td>
+            <td>@Html.ActionLink("Edit", "Edit", new { id = product.ProductId })</td>
+            <td>@Html.ActionLink("Delete", "Delete", new { id = product.ProductId })</td>
+        </tr>
+    }
 </table>
+@Html.ActionLink("Create New", "Create")
 
 @{
     int totalPages = (int)Math.Ceiling((double)Model.TotalProducts / Model.PageSize);
