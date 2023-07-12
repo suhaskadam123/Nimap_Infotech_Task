@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "OfF7U1wuIJyxncVkda3kTxe8yti+0BLXS+4/lkg8KBs2sSTdhZ1SfG5hHDJycpliyCVtvY/mHVSPx2eOp7uFHQ==",
+  "dgSpecHash": "cTb67crckDOoAJk9vPh4KjCaS7MfMLN4m6J5Fsu3Jn3Qm07CyqHuP0ST25mVL1oVtNyABbAmVnKI/Ty6efrdRg==",
   "success": true,
-  "projectFilePath": "C:\\Nimap Infotech\\Nimap Infotech\\Nimap Infotech\\Nimap Infotech_Task.csproj",
+  "projectFilePath": "C:\\Users\\Dell\\Source\\Repos\\Nimap_Infotech_Task\\Nimap Infotech\\Nimap Infotech_Task.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Dell\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
