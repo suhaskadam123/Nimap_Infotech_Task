@@ -136,30 +136,6 @@ namespace Nimap_Infotech.Controllers
        
         public ActionResult Delete(int id)
         {
-            Product product = new Product();
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                connection.Open();
-                string query = "SELECT * FROM Product WHERE ProductId = @ProductId";
-                SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@ProductId", id);
-                SqlDataReader reader = command.ExecuteReader();
-                if (reader.Read())
-                {
-                    product.ProductId = Convert.ToInt32(reader["ProductId"]);
-                    product.ProductName = reader["ProductName"].ToString();
-                    product.CategoryId = Convert.ToInt32(reader["CategoryId"]);
-                    product.CategoryName = reader["CategoryName"].ToString();
-                }
-                reader.Close();
-            }
-            return View(product);
-        }
-
-        
-        [HttpPost]
-        public ActionResult DeleteConfirmed(int id)
-        {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
@@ -170,6 +146,9 @@ namespace Nimap_Infotech.Controllers
             }
             return RedirectToAction("Index");
         }
+
+        
+       
     }
 
 }

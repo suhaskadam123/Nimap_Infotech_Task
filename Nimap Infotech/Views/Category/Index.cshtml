@@ -19,7 +19,8 @@
             <td>@category.CategoryName</td>
             <td>@Html.ActionLink("Edit", "Edit", new { id = category.CategoryId })</td>
             <td>@Html.ActionLink("Delete", "Delete", new { id = category.CategoryId })</td>
+            <td>@Html.ActionLink("Create", "Create")</td>
         </tr>
     }
 </table>
-@Html.ActionLink("Create New", "Create")
+

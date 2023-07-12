@@ -94,28 +94,6 @@ namespace Nimap_Infotech.Controllers
        
         public ActionResult Delete(int id)
         {
-            Category category = new Category();
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                connection.Open();
-                string query = "SELECT * FROM Category WHERE CategoryId = @CategoryId";
-                SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@CategoryId", id);
-                SqlDataReader reader = command.ExecuteReader();
-                if (reader.Read())
-                {
-                    category.CategoryId = Convert.ToInt32(reader["CategoryId"]);
-                    category.CategoryName = reader["CategoryName"].ToString();
-                }
-                reader.Close();
-            }
-            return View(category);
-        }
-
-        
-        [HttpPost]
-        public ActionResult DeleteConfirmed(int id)
-        {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
@@ -126,6 +104,9 @@ namespace Nimap_Infotech.Controllers
             }
             return RedirectToAction("Index");
         }
+
+        
+        
     }
 
 }
